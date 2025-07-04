@@ -1,0 +1,16 @@
+<html><head><title>Admin</title></head><body>
+<h2>Painel do Administrador</h2>
+<table border="1">
+    <tr><th>ID</th><th>Nome</th><th>Email</th><th>Senha</th><th>Data de Cadastro</th></tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.nome }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.senha }}</td>
+        <td>{{ user.data_cadastro }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/logout">Sair</a>
+</body></html>
